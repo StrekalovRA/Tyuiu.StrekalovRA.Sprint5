@@ -24,7 +24,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task1.V14.Lib
             }
 
             File.WriteAllText(Path, Str_Y);
-            return Path;
+            return Str_Y;
 
         }
     }

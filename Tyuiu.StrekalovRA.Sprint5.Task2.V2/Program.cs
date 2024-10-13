@@ -26,10 +26,8 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task1.V14
 
             DataService DS = new DataService();
             var T = DS.SaveToFileTextData(new int[3, 3] { { -7, 7, 5 }, { 4, 2, -7 }, { 2, 6, -4 } });
-            Console.WriteLine("РЕЗУЛЬТАТ: " + T);
-
-            string Res = File.ReadAllText(T);
-            Console.WriteLine(Res);
+            Console.WriteLine("РЕЗУЛЬТАТ: ");
+            Console.WriteLine(T);
         }
     }
 }

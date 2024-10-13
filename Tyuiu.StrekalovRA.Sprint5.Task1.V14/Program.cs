@@ -25,8 +25,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task1.V14
             DataService DS = new DataService();
             var Res = DS.SaveToFileTextData(ST, END);
 
-            string T = File.ReadAllText(Res);
-            Console.WriteLine("РЕЗУЛЬТАТ: " + '\n' + T);
+            Console.WriteLine("РЕЗУЛЬТАТ: ");
             Console.WriteLine(Res);
 
             Console.ReadKey();
