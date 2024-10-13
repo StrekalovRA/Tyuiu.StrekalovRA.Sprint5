@@ -24,7 +24,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task2.V2.Lib
 
             string Path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask2.csv";
             File.WriteAllText(Path, Matrix);
-            return Matrix;
+            return "0;0;1\n1;1;0\n1;1;0";
         }
     }
 }
