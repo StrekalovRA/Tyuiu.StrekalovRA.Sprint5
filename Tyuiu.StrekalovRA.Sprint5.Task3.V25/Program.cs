@@ -1,7 +1,7 @@
-﻿using Tyuiu.StrekalovRA.Sprint5.Task0.V9.Lib;
+﻿using Tyuiu.StrekalovRA.Sprint5.Task3.V25.Lib;
 using System.IO;
 
-namespace Tyuiu.StrekalovRA.Sprint5.Task0.V9
+namespace Tyuiu.StrekalovRA.Sprint5.Task3.V25
 {
     internal class Program
     {
@@ -10,27 +10,23 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task0.V9
             Console.Title = "Спринт #5 | Выполнил: Стрекалов Р. А. | Смартб-24-1";
             /*
                 Спринт #5
-                Тема: Класс File. Запись данных в текстовый файл
-                Задание #0
-                Вариант #8
+                Тема: Потоковый метод записи данных в бинарный файл
+                Задание #3
+                Вариант #25
                 Выполнил: Стрекалов Роман Алексеевич | Смартб-24-1
 
                 УСЛОВИЕ:
                 Дано выражение вычислить его значение при x = 3, результат сохранить в
-                текстовый файл OutPutFileTask0.txt и вывести на консоль.
-                Округлить до трёх знаков после запятой.
-                y = (x^3)/(x^2 - 1)
+                бинарный файл OutPutFileTask3.bin и вывести на консоль. Округлить до трёх знаков после запятой.
+                F(x) = (3x^4+1)/x^3
              */
 
-            int X = 3;
             DataService DS = new DataService();
-            var Res = DS.SaveToFileTextData(X);
-
-            string T = File.ReadAllText(Res);
+            var T = DS.SaveToFileTextData(3);
             Console.WriteLine("РЕЗУЛЬТАТ: " + T);
-            Console.WriteLine(Res);
 
-            Console.ReadKey();
+            var Res = File.ReadAllText(T);
+            Console.WriteLine(Res);
         }
     }
 }
