@@ -10,7 +10,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task0.V9.Lib
             double Y = Math.Pow(x, 3) / (Math.Pow(x, 2) - 1);
             Y = Math.Round(Y, 3);
 
-            string Cur_Path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string Cur_Path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
             File.WriteAllText(Cur_Path, Convert.ToString(Y));
             return Cur_Path;
         }
