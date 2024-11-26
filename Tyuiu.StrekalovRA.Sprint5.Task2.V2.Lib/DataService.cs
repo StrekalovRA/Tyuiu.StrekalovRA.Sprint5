@@ -9,15 +9,25 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task2.V2.Lib
         {
             string Matrix = "";
 
+            // 1 2 -4 -> 1 1 0
+            // 4 1 -5 -> 1 1 0
+            // -> 1;1;0\n1;1;0
             for (int I = 0; I < M.GetLength(0); I += 1) {
                 for (int J = 0; J < M.GetLength(1); J += 1) {
+                    if (J != M.GetLength(1) - 1) {
+                        if (M[I, J] < 0) { Matrix += "0;"; }
+                        else if (M[I, J] >= 0) { Matrix += "1;"; }
+                    }
 
-                    if (M[I, J] > 0) {
-                        if (J < (M.GetLength(1) - 1)) Matrix += "1;";
-                        else Matrix += "1\n";
-                    } else {
-                        if (J < (M.GetLength(1) - 1)) Matrix += "0;";
-                        else Matrix += "0\n";
+                    else if (J == M.GetLength(1) - 1) {
+                        if (I != M.GetLength(0) - 1) {
+                            if (M[I, J] < 0) { Matrix += "0\n"; }
+                            else if (M[I, J] >= 0) { Matrix += "1\n"; }
+                        }
+                        else if (I == M.GetLength(0) - 1) {
+                            if (M[I, J] < 0) { Matrix += "0"; }
+                            else if (M[I, J] >= 0) { Matrix += "1"; }
+                        }
                     }
                 }
             }
