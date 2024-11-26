@@ -24,7 +24,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task2.V2.Lib
 
             string T_Path = Path.Combine(Path.GetTempPath(), "OutPutFileTask2.csv");
             File.WriteAllText(T_Path, Matrix);
-            return "0;0;1\n1;1;0\n1;1;0";
+            return Matrix;
         }
     }
 }
