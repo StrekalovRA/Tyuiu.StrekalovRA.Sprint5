@@ -7,9 +7,9 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task1.V14.Lib
     {
         public string SaveToFileTextData(int ST, int END)
         {
-            string Path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask1.txt";
-            FileInfo F = new FileInfo(Path);
-            if (F.Exists) { File.Delete(Path); }
+            string T_Path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt" );
+            FileInfo F = new FileInfo(T_Path);
+            if (F.Exists) { File.Delete(T_Path); }
 
             double Y = 0;
             string Str_Y = "";
@@ -23,7 +23,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task1.V14.Lib
                 if (X != END) {  Str_Y += "\n"; }
             }
 
-            File.WriteAllText(Path, Str_Y);
+            File.WriteAllText(T_Path, Str_Y);
             return Str_Y;
 
         }
