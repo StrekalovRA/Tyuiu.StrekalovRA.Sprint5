@@ -11,7 +11,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
             string Nums = File.ReadAllText(path);
             double Res = 1;
 
-            string[] New_Nums = Nums.Split("\n");
+            string[] New_Nums = Nums.Split();
             foreach (var I in New_Nums)
             {
                 var J = I.Replace('.', ',');
