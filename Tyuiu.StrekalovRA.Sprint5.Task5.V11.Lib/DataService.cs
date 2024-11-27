@@ -14,13 +14,13 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
             string[] New_Nums = Nums.Split("\n");
             foreach (var I in New_Nums)
             {
-                I = I.Replace(".", ",");
-                double Num_ = Convert.ToDouble(I);
+                var J = I.Replace('.', ',');
+                double Num_ = Convert.ToDouble(J);
 
                 if (Math.Abs(Num_) % 2 == 1)
                 {
                     Res = Res * Num_;
-                    Console.WriteLine(I);
+                    Console.WriteLine(J);
                 }
             }
             return Math.Round(Res, 3);
