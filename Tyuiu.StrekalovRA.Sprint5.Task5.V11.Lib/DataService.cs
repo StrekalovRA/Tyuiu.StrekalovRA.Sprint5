@@ -14,6 +14,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
             string[] New_Nums = Nums.Split("\n");
             foreach (var I in New_Nums)
             {
+                I = I.Replace(".", ",");
                 double Num_ = Convert.ToDouble(I);
 
                 if (Math.Abs(Num_) % 2 == 1)
