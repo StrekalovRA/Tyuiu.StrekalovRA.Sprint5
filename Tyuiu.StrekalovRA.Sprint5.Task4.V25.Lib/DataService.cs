@@ -9,6 +9,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task4.V25.Lib
         public double LoadFromDataFile (string path)
         {
             string Num_File = File.ReadAllText(path);
+            Num_File = Num_File.Replace(".", ",");
             double Y = 0;
             var X = Convert.ToDouble(Num_File);
 
