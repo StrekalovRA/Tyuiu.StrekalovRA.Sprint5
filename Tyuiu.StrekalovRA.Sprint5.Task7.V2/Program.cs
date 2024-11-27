@@ -20,7 +20,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11
              */
 
             //string A_Path = $@"{Directory.GetCurrentDirectory()}\InPutFileTask4.txt";
-            //string A_Path = @"T:\Big ProgramZ\VS_ProjectZ\Sprint5\DataSprint5\InPutDataFileTask5V25.txt";
+            // T:\Big ProgramZ\VS_ProjectZ\Sprint5\DataSprint5\InPutDataFileTask7V2.txt
             string A_Path = Console.ReadLine();
             //string A_Path = "r";
 

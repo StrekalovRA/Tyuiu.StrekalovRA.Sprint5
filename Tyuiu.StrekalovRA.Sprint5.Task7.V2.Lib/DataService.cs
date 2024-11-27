@@ -23,8 +23,9 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task7.V2.Lib
                 }
             }
 
-            string R_Path = Path.Combine(Path.GetTempPath(), New_);
+            string R_Path = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
             File.WriteAllText(R_Path, New_);
+            Console.WriteLine(New_ + " " + R_Path);
             return R_Path;
         }
     }
