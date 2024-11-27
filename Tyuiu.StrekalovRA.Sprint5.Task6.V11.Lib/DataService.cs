@@ -9,7 +9,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
         public int LoadFromDataFile(string path)
         {
             string Text = File.ReadAllText(path);
-            int res = 0;
+            int res = 1;
             Text = Text.Replace("\n", " ");
             Console.WriteLine(Text);
 
@@ -19,7 +19,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
                     res += 1;
                 }
             }
-            return res - 1;
+            return res;
         }
     }
 }
