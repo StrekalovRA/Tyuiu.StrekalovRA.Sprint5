@@ -19,7 +19,7 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
                     res += 1;
                 }
             }
-            return Text;
+            return res - 1;
         }
     }
 }
