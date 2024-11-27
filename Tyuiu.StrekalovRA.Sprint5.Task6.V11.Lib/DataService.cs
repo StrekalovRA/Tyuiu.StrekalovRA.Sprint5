@@ -10,8 +10,9 @@ namespace Tyuiu.StrekalovRA.Sprint5.Task5.V11.Lib
         {
             string Text = File.ReadAllText(path);
             int res = 0;
+            Text = Text.Replace("\n", " ");
 
-            foreach (var I in Text.Split()) { 
+            foreach (var I in Text.Split(" ")) { 
                 if (I.Length == 6)
                 {
                     res += 1;
